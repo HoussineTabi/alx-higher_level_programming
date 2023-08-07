@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 a = 98
-print(a, "Battery street")
+print(f"{a} Battery street")
