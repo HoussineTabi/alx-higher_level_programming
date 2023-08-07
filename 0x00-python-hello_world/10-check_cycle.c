@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * check_cycle - checks if there is a cycle
@@ -8,7 +8,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *previous = list;
+	listint_t *previouse = list;
 
 	while (list)
 	{
