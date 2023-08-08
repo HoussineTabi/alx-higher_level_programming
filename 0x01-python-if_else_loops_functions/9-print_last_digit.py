@@ -3,6 +3,6 @@ def print_last_digit(number):
     r = 0
     r = number % 10
     if number < 0:
-        r = r - 10
-    print("{}".format(r),sep='', end='')
+        r = -1 * (r - 10)
+    print("{}".format(r), sep='', end='')
     return (r)
