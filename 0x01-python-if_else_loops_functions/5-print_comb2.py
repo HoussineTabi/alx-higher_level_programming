@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for i in range(100):
-    if i != 99:
-        print("{:02},".format(i), sep='', end=' ')
+for _ in range(100):
+    if _ != 99:
+        print("{:02},".format(_), sep='', end=' ')
     else:
-        print(f"{i}")
+        print(f"{_}")

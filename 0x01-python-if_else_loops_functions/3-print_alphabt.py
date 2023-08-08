@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-for i in range(len("abcdefghijklmnopqrstuvwxyz")):
-    if "abcdefghijklmnopqrstuvwxyz"[i] == 'e':
+for _ in range(len("abcdefghijklmnopqrstuvwxyz")):
+    if "abcdefghijklmnopqrstuvwxyz"[_] == 'e':
         continue
-    if "abcdefghijklmnopqrstuvwxyz"[i] == 'q':
+    if "abcdefghijklmnopqrstuvwxyz"[_] == 'q':
         continue
-    print(f'{"abcdefghijklmnopqrstuvwxyz"[i]}', sep='', end='')
+    print(f'{"abcdefghijklmnopqrstuvwxyz"[_]}', sep='', end='')
