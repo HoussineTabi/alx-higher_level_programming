@@ -4,4 +4,4 @@ for _ in range(len("abcdefghijklmnopqrstuvwxyz")):
         continue
     if "abcdefghijklmnopqrstuvwxyz"[_] == 'q':
         continue
-    print(f'{"abcdefghijklmnopqrstuvwxyz"[_]}', sep='', end='')
+    print("{}".format("abcdefghijklmnopqrstuvwxyz"[_]), sep='', end='')
