@@ -11,5 +11,5 @@ def fizzbuzz():
         elif i % 3 == 0:
             print("Fizz".format, sep='', end=' ')
         else:
-            print("{}".format(i), end=' ')
+            print("{}".format(i), end='')
 
