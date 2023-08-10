@@ -4,4 +4,4 @@ if __name__ == "__main__":
     hidd = dir(hidden_4)
     for hid in hidd:
         if hid[0] != '_':
-            print(hid)
+            print("{}".format(hid))
