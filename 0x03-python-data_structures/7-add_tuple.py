@@ -3,7 +3,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     """This function add to tuple together in a new tuple
        Return: the new tuple
     """
-    sum_element=[]
+    sum_element = []
     a = max(len(tuple_a), len(tuple_b))
     for i in range(a):
         if i < len(tuple_a) and i < len(tuple_b):

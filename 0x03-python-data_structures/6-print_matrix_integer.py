@@ -7,4 +7,4 @@ def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         for j in range(len(i) - 1):
             print("{}".format(i[j]), end=' ')
-        print("{}".format(i[len(i) -1]))
+        print("{}".format(i[len(i) - 1]))
