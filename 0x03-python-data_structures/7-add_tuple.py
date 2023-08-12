@@ -12,5 +12,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
             sum_element.append(tuple_b[i])
         else:
             sum_element.append(tuple_a[i])
-    sum_element = tuple(sum_element[0:2])
-    return (sum_element)
+    return (sum_element[0], sum_element[1])
