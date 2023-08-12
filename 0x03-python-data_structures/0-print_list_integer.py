@@ -5,4 +5,4 @@ def print_list_integer(my_list=[]):
                  my_list: the list that contains the integes
     """
     for i in my_list:
-        print("{}".format(i))
+        print("{:d}".format(i))
