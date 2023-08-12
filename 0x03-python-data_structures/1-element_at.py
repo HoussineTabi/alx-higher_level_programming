@@ -7,6 +7,6 @@ def element_at(my_list, idx):
                  idx: the index of elemnt
        Return: the element if exist and None otherwise
        """
-    if len(my_list) < idx or idx < 0 or len(my_list) == 0:
+    if len(my_list) < idx + 1 or idx < 0 or len(my_list) == 0:
         return (None)
     return (my_list[idx])
