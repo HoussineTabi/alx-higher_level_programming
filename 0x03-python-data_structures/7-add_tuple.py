@@ -12,4 +12,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
             sum_element.append(tuple_b[i])
         else:
             sum_element.append(tuple_a[i])
-    return (sum_element[0], sum_element[1])
+        if len(sum_element) > 1:
+            return (sum_element[0], sum_element[1])
+        else:
+            return (sum_element[0], 0)
