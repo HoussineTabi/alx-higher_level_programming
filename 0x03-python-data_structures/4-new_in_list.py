@@ -9,7 +9,7 @@ def new_in_list(my_list, idx, element):
            return the new list after modification
     """
     new_list = []
-    if len(my_list) < idx - 1 or idx < 0:
+    if len(my_list) < idx + 1 or idx < 0:
         new_list = list(my_list)
         return (new_list)
     new_list = list(my_list)
