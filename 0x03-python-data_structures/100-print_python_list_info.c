@@ -1,8 +1,9 @@
 #include <Python.h>
 void print_python_list_info(PyObject *p);
 /**
- * print_python_list_info - C function that prints some basic info about Python lists.
- * @PyObject: the first argument data struct in python
+ * print_python_list_info - C function that prints
+ * some basic info about Python lists.
+ * @p: the first argument data struct in python
  */
 void print_python_list_info(PyObject *p)
 {
