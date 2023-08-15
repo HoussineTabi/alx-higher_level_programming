@@ -7,7 +7,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *new_head = (*head);
-	int array_int[1024];
+	int *array_int;
 	int count = 0, middle;
 
 	if (!head || !(*head))
@@ -17,6 +17,9 @@ int is_palindrome(listint_t **head)
 		count++;
 		new_head = new_head->next;
 	}
+	array_int = malloc(sizeof(int) * count);
+	if (!array_int)
+		return (0);
 	new_head = (*head);
 	count = 0;
 	while (new_head)
