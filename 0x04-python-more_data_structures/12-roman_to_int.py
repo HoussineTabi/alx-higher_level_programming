@@ -4,6 +4,8 @@ def roman_to_int(roman_string):
        number tu an integer number"""
     if type(roman_string) is not str or len(roman_string) == 0:
         return 0
+    if roman_string is None:
+        return 0
     number = 0
     roman_dict = {"I": 1, "II": 2, "III": 3, "IV": 4,
                   "V": 5, "VI": 6, "VII": 7, "VIII": 8,
