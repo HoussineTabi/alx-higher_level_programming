@@ -1,6 +1,3 @@
 #!/usr/bin/python3
 def multiply_by_2(a_dictionary):
-    new_dic = dict()
-    for i in a_dictionary:
-        new_dic[i] = a_dictionary[i]
-    return new_dic
+    new_dict = dict(map(lambda x: new_dict[x] = 2 * a_dictionary[x], a_dictionary))
