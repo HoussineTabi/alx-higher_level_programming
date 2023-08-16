@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
         if j == 0:
             x = i
             j = 1
-        if rm_dt[i] > rmn_dt[x]:
+        if rm_dt[i] > rm_dt[x]:
             number = (number + rm_dt[i] - 2 * rm_dt[x])
         else:
             number += rm_dt[i]
