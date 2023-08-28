@@ -6,6 +6,6 @@ if "__name__" == "__main__":
                 print(my_list[i], end='')
             except IndexError:
                 print()
-        return (i)
+                return (i)
     print()
     return (i + 1)
