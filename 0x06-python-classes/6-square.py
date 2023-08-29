@@ -75,7 +75,6 @@ class Square:
     def position(self, value):
         """
         Write a class Square that defines a square by
-        and filed the position attribute
         """
         errstr = "position must be a tuple of 2 positive integers"
         if isinstance(value, tuple) and len(value) == 2:
