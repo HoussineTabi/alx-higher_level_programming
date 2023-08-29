@@ -50,5 +50,7 @@ class Square:
         """
         print a square in the stdout with #
         """
-        for i in range(self.size):
-            print("#" * self.size)
+        for i in range(self.__size):
+            print("#" * self.__size)
+        if self.__size == 0:
+            print()
