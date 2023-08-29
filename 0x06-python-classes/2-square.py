@@ -2,12 +2,12 @@
 """
 This class is used to Create object of type Square
 """
+
+
 class Square:
     """
     This class is used to define a square object
     """
-
-
     def __init__(self, size=0):
         """
         This mothod initialize an object of the class square
