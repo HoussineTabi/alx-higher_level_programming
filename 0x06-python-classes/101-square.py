@@ -88,3 +88,19 @@ class Square:
                 raise TypeError(errstr)
         else:
             raise TypeError(errstr)
+
+    def __str__(self,):
+        """
+        This function return a string of square
+        """
+        strarea = ""
+        if self.position[1] != 0 and self.__size != 0:
+            strarea += "\n" * self.position[1]
+        for i in range(self.__size):
+            if self.__position[0] != 0:
+                strarea += " " * self.__position[0] + "#" * self.__size + '\n'
+            else:
+                strarea += "#" * self.__size + '\n'
+        if (self.__size == 0):
+            strarea += "\n"
+        return strarea
