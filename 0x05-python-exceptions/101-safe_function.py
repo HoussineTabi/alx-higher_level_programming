@@ -9,8 +9,8 @@ def safe_function(fct, *arg):
     except ValueError as err:
         print("Exception: {}".format(err), file=sys.stderr)
     except TypeError as err:
-        print("Except: {}".format(err), file=sys.stderr)
+        print("Exception: {}".format(err), file=sys.stderr)
     except ZeroDivisionError as err:
-        print("Except: {}".format(err), file=sys.stderr)
+        print("Exception: {}".format(err), file=sys.stderr)
     finally:
         return a
