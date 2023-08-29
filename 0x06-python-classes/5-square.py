@@ -45,3 +45,10 @@ class Square:
                 raise ValueError("size must be >= 0")
         else:
             raise TypeError("size must be integer")
+
+    def my_print(self):
+        """
+        print a square in the stdout with #
+        """
+        for i in range(self.size):
+            print("#" * self.size)
