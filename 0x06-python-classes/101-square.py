@@ -98,9 +98,9 @@ class Square:
             strarea += "\n" * self.position[1]
         for i in range(self.__size):
             if self.__position[0] != 0:
-                strarea += " " * self.__position[0] + "#" * self.__size + '\n'
+                strarea += " " * self.__position[0] + "#" * self.__size
             else:
-                strarea += "#" * self.__size + '\n'
-        if (self.__size == 0):
-            strarea += "\n"
+                strarea += "#" * self.__size
+            if i != self.__size - 1:
+                strarea += "\n"
         return strarea
