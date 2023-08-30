@@ -46,5 +46,36 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
-        def __int__(self):
-            return self.__size
+    def __int__(self):
+        """
+        gives a value to an object
+        """
+        return self.__size
+
+    def __eq__(self, other):
+        """
+        checks if the object self equal other
+        """
+        if isinstance(other, Square):
+            return int(self) == int(other)
+        return False
+
+    def __lt__(self, other):
+        if isinstance(other, Square):
+            return int(self) < int(other)
+        return False
+
+    def __le__(self, other):
+        if isinstance(other, Square):
+            return int(self) <= int(other)
+        return False
+
+    def __gt__(self, other):
+        if isinstance(other, Square):
+            return int(self) > int(other)
+        return False
+
+    def __ge__(self, other):
+        if isinstance(other, Square):
+            return int(self) >= int(other)
+        return False
