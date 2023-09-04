@@ -52,25 +52,29 @@ class Rectangle:
         else:
             raise TypeError("height must be an integer")
 
-        def area(self):
-            """
-            returns the area of a Rectangle object
-            """
-            return (self.__width * self.__height)
+    def area(self):
+        """
+        returns the area of a Rectangle object
+        """
+        return (self.__width * self.__height)
 
-        def perimeter(self):
-            """
-            returns the perimeter of a Rectangle object
-            """
-            if self.__width == 0 or self.height == 0:
-                return 0
-            return 2 * (self.__width + self._height)
+    def perimeter(self):
+        """
+        returns the perimeter of a Rectangle object
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        sheap = ''
+        for i in range(self.__height):
+            if i != self.__height - 1:
+                sheap += "#" * self.__width + "\n"
+            else:
+                sheap += "#" * self.__width
+        return sheap
 
 
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
-    print(my_rectangle.__dict__)
-
-    my_rectangle.width = 10
-    my_rectangle.height = 3
-    print(my_rectangle.__dict__)
