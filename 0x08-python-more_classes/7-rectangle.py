@@ -18,6 +18,8 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+        self.print_symbol = Rectangle.print_symbol
+        
 
     @property
     def width(self):
@@ -82,9 +84,9 @@ class Rectangle:
             return sheap
         for i in range(self.__height):
             if i != self.__height - 1:
-                sheap += str(Rectangle.print_symbol) * self.__width + "\n"
+                sheap += str(self.print_symbol) * self.__width + "\n"
             else:
-                sheap += str(Rectangle.print_symbol) * self.__width
+                sheap += str(self.print_symbol) * self.__width
         return sheap
 
     def __repr__(self):
