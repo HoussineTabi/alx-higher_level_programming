@@ -9,7 +9,11 @@ class Rectangle:
     In this class we dfine a Rectangle
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
+        """
+        creates an instance
+        """
         self.width = width
         self.height = height
         number_of_instances += 1
