@@ -66,7 +66,7 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    def __repe__(self):
+    def __str__(self):
         sheap = ''
         if self.__width == 0 or self.height == 0:
             return sheap
