@@ -50,7 +50,7 @@ class Rectangle:
             else:
                 raise ValueError("height must be >= 0")
         else:
-            raise TypeError("hight must be an integer")
+            raise TypeError("height must be an integer")
 
 
 if __name__ == "__main__":
