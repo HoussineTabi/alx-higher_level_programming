@@ -15,11 +15,15 @@ try:
     else:
         for i in range(1, N - 1):
             lst = []
+            num = 0
             for j in range(N):
-                if i + 2 * j < N:
-                    lst.append([j, i + 2 * j])
+                if j == 0:
+                    num = i
                 else:
-                    lst.append([j, abs(N - 2 * j)])
+                    num += 2
+                if num >= N:
+                    num = 0
+                lst.append([j, num])
             print(lst)
 except ValueError as e:
     print("N must be a number")
