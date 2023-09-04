@@ -82,9 +82,9 @@ class Rectangle:
             return sheap
         for i in range(self.__height):
             if i != self.__height - 1:
-                sheap += repr(Rectangle.print_symbol) * self.__width + "\n"
+                sheap += str(Rectangle.print_symbol) * self.__width + "\n"
             else:
-                sheap += repr(Rectangle.print_symbol) * self.__width
+                sheap += str(Rectangle.print_symbol) * self.__width
         return sheap
 
     def __repr__(self):
@@ -123,5 +123,3 @@ if __name__ == "__main__":
 
     my_rectangle_3.print_symbol = ["C", "is", "fun!"]
     print(my_rectangle_3)
-
-
