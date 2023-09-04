@@ -67,6 +67,9 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
+        """
+        returns a simple representation of an object the frome
+        """
         sheap = ''
         if self.__width == 0 or self.height == 0:
             return sheap
@@ -77,6 +80,34 @@ class Rectangle:
                 sheap += "#" * self.__width
         return sheap
 
+    def __repr__(self):
+        """
+        returns a simple representation of an object
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
 
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
+    print(str(my_rectangle))
+    print("--")
+    print(my_rectangle)
+    print("--")
+    print(repr(my_rectangle))
+    print("--")
+    print(hex(id(my_rectangle)))
+    print("--")
+    # create new instance based on representation
+
+    new_rectangle = eval(repr(my_rectangle))
+    print(str(new_rectangle))
+    print("--")
+    print(new_rectangle)
+    print("--")
+    print(repr(new_rectangle))
+    print("--")
+    print(hex(id(new_rectangle)))
+    print("--")
+
+    print(new_rectangle is my_rectangle)
+    print(type(new_rectangle) is type(my_rectangle))
