@@ -22,4 +22,4 @@ try:
                     lst.append([j, abs(N - 2 * j)])
             print(lst)
 except ValueError as e:
-    print("N must be an integer")
+    print("N must be a number")
