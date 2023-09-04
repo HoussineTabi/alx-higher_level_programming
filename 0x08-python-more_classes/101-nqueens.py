@@ -7,10 +7,9 @@ import sys
 if len(sys.argv) != 2:
     print("Usage: nqueens N")
     exit(1)
-N = int(sys.argv[1])
-if not isinstance(N, int):
-    print("N must be a number")
-else:
+try:
+    N = int(sys.argv[1])
+    N = int(sys.argv[1])
     if N < 4:
         print("N must be at less 4")
     else:
@@ -22,3 +21,5 @@ else:
                 else:
                     lst.append([j, abs(N - 2 * j)])
             print(lst)
+except ValueError as e:
+    print("N must be an integer")
