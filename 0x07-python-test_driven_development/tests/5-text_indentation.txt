@@ -1,0 +1,41 @@
+The "text_indentation" module:
+==============================
+
+Use "text_indentation" function:
+---------------------------------
+
+
+Import the function "text_idnetation" to test:
+             >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+
+Checking for the docstring module:
+              >>> docstr = __import__("5-text_indentation").__doc__
+              >>> len(docstr) > 1
+              True
+
+
+
+Checking for the docstring function:
+               >>> docstr = __import__("5-text_indentation").text_indentation.__doc__
+                >>> len(docstr) > 1
+                True
+
+
+Checking for the normal text with nothing:
+                >>> text_indentation("Hello World!")
+                Hello World!
+
+
+Checking for the input with camma:
+                >>> text_indentation("hello? world!")
+                hello?
+                <BLANKLINE>
+                world!
+
+
+Checking for the value non text:
+                >>> text_indentation(True)
+                Traceback (most recent call last):
+                     ...
+                TypeError: text must be a string
