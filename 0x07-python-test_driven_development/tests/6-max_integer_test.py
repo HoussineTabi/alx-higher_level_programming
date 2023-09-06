@@ -3,7 +3,7 @@
 Test a code using the unittest module
 """
 import unittest
-import max_integer
+max_integer = __import__("max_integer").max_integer
 
 
 class testMaxinteger(unittest.TestCase):
@@ -15,8 +15,8 @@ class testMaxinteger(unittest.TestCase):
         """
         test the regular output
         """
-        self.assertEqual(Max_integer.max_integer([1, 2, 3, 4]), 4)
-        self.assertEqual(Max_integer.max_integer([]), None)
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([]), None)
 
 
 if __name__ == "__main__":
