@@ -3,7 +3,7 @@
 Test a code using the unittest module
 """
 import unittest
-import Max_integer
+import max_integer
 
 
 class testMaxinteger(unittest.TestCase):
