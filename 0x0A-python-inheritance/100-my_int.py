@@ -8,7 +8,7 @@ class MyInt(int):
     """
     class MyInt inherit from the int class
     """
-    def __int__(self, value):
+    def __int__(self, value=None):
         self.value = value
 
 
