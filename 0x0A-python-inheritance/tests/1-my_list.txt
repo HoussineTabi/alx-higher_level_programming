@@ -1,0 +1,31 @@
+The "my_list" module
+==========================
+
+
+
+Use "Mylist" class
+-----------------------
+
+
+import the class to test:
+          >>> MyList = __import__("1-my_list").MyList
+
+Check for the docstring module:
+          >>> docstr = __import__("1-my_list").__doc__
+          >>> len(docstr) > 1
+          True
+
+Check for the class docstring:
+          >>> docstr = __import__("1-my_list").MyList.__doc__
+          >>> len(docstr) > 1
+          True
+
+Check for the output:
+          >>> my_list = MyList()
+          >>> my_list.append(1)
+          >>> my_list.append(4)
+          >>> my_list.append(2)
+          >>> my_list.append(3)
+          >>> my_list.append(5)
+          >>> my_list.print_sorted()
+          [1, 2, 3, 4, 5]

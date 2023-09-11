@@ -17,4 +17,5 @@ class MyList(list):
 
 
 if __name__ == "__main__":
-    my_list = MyList()
+    import doctest
+    doctest.testfile("./tests/1-my_list.txt")
