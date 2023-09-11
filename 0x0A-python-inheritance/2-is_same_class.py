@@ -8,7 +8,7 @@ def is_same_class(obj, a_class):
     """
     checks if the objec in the class
     """
-    return isinstance(obj, a_class)
+    return isinstance(obj, a_class) and issubclass(a_class, type(obj))
 
 
 if __name__ == "__main__":
