@@ -13,10 +13,11 @@ def add_attribute(obj, name, name_value):
     else:
         setattr(obj, name, name_value)
 
+
 if __name__ == "__main__":
     class MyClass():
         pass
-    
+
     mc = MyClass()
     add_attribute(mc, "name", "John")
     print(mc.name)
