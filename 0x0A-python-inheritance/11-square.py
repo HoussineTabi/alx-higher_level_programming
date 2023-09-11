@@ -26,18 +26,19 @@ class Rectangle(__import__("7-base_geometry").BaseGeometry):
         returns the area
         """
         return self.__width * self.__height
+
     def __str__(self):
         """
         the form of the Rectangle
         """
-        return "[{}] {}/{}".format(self.__class__.__name__, self.__width, self.__height)
+        class_name = self.__class__.__name__
+        return "[{}] {}/{}".format(class_name, self.__width, self.__height)
 
 
 class Square(Rectangle):
     """
     This class define
     """
-
 
     def __init__(self, size):
         Rectangle.__init__(self, size, size)

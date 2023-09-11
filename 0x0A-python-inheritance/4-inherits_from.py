@@ -9,7 +9,7 @@ def inherits_from(obj, a_class):
     lookup of the object in the class and the base class
     """
 
-    return issubclass(type(obj), a_class) and type(obj) != a_class
+    return issubclass(type(obj), a_class) and type(obj) is a_class
 
 
 if __name__ == "__main__":

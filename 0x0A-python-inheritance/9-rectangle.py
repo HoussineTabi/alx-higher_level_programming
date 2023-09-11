@@ -8,6 +8,7 @@ class Rectangle(__import__("7-base_geometry").BaseGeometry):
     """
     the class BaseGeometry is a child of the class dictionnary
     """
+
     def __init__(self, width, height):
         """
         the constructo
@@ -26,11 +27,14 @@ class Rectangle(__import__("7-base_geometry").BaseGeometry):
         returns the area
         """
         return self.__width * self.__height
+
     def __str__(self):
         """
         the form of the Rectangle
         """
-        return "[{}] {}/{}".format(self.__class__.__name__, self.__width, self.__height)
+        cl_name = self.__class__.__name__
+        return "[{}] {}/{}".format(cl_name, self.__width, self.__height)
+
 
 if __name__ == "__main__":
     r = Rectangle(3, 5)

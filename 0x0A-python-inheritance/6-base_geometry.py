@@ -18,10 +18,7 @@ class BaseGeometry:
         """
         the function area that returns the area or raise error
         """
-        if self.base_area == None:
-            raise Exception("area() is not implemented")
-        else:
-            return self.base_area
+        raise Exception("area() is not implemented")
 
 
 if __name__ == "__main__":

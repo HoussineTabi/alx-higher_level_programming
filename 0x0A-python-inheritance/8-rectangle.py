@@ -20,6 +20,8 @@ class Rectangle(__import__("7-base_geometry").BaseGeometry):
                 raise TypeError("with must be an integer")
             else:
                 raise TypeError("height must be an integer")
+
+
 if __name__ == "__main__":
     r = Rectangle(3, 5)
 
