@@ -1,0 +1,35 @@
+The "base_geometry" module
+==========================
+
+
+
+Use "BaseGeometry" class
+-----------------------
+
+
+import the class to test:
+          >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Check for the docstring module:
+          >>> docstr = __import__("7-base_geometry").__doc__
+          >>> len(docstr) > 1
+          True
+
+Check for the class docstring:
+          >>> docstr = __import__("7-base_geometry").BaseGeometry.__doc__
+          >>> len(docstr) > 1
+          True
+
+Check for the output if the value if string:
+          >>> bg = BaseGeometry()
+          >>> bg.integer_validator("name","John")
+          Traceback (most recent call last):
+              ...
+          TypeError: name must be an integer
+
+Check for the output if the input value is negative:
+          >>> bg.integer_validator("age", 0)
+          Traceback (most recent call last):
+                ...
+          ValueError: age must be greater than 0
+

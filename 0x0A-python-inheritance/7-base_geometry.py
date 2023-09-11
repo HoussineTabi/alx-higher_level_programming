@@ -39,6 +39,8 @@ class BaseGeometry:
 
 if __name__ == "__main__":
 
+    import doctest
+    doctest.testfile("./tests/7-base_geometry.txt")
     bg = BaseGeometry()
     bg.integer_validator("my_int", 12)
     bg.integer_validator("width", 89)
