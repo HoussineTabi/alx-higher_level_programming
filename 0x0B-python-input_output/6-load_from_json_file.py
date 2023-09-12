@@ -4,6 +4,7 @@ how to load from a file json
 """
 import json
 
+
 def load_from_json_file(filename):
     """
     load the data from a file json file
