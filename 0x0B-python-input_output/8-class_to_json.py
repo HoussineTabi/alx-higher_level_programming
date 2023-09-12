@@ -10,7 +10,10 @@ def class_to_json(obj):
     data structure
     """
     att = obj.__dict__
-    ser = {k: v for k, v in att.items() if isinstance(v, (list, dict, str, int, bool))}
+    ser = {}
+    for k, v in att.items():
+        if isinstance(v, (list, dict, str, int, bool)):
+            ser[k] = v
     return ser
 
 
