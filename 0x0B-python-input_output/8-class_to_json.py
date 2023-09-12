@@ -13,4 +13,5 @@ def class_to_json(obj):
     return json.dumps(dict_attributes)
 
 
-
+if __name__ = "__main__":
+    print()
