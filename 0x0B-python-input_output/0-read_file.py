@@ -10,9 +10,9 @@ def read_file(filename=""):
     Arguments:
               filename: the name of the file
     """
-    with open(filename, "r", encoding="utf-8") as f:
+    with open(filename, "r+", encoding="utf-8") as f:
         return f.read()
 
 
 if __name__ == "__main__":
-    print(read_file("hello"))
+    print()
