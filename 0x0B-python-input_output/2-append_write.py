@@ -9,8 +9,9 @@ def append_write(filename="", text=""):
     append_write used to appending in a file
     """
     with open(filename, "a+", encoding="utf-8") as f:
-        f.seek(1,1)
-        return f.write(filename, text)
+        a = len(f.read())
+        a += f.write(filename, text)
+        return (a)
 
 
 if __name__ == "__main__":
