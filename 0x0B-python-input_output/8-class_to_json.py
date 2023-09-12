@@ -9,7 +9,9 @@ def class_to_json(obj):
     unction that returns the dictionary
     data structure
     """
-    return "string"
+    att = obj.__dict__
+    ser = {k: v for k, v in att.items() if isinstance(v, (list, dict, str, int, bool))}
+    return ser
 
 
 if __name__ == "__main__":
