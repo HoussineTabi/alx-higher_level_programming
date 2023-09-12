@@ -11,7 +11,7 @@ def read_file(filename=""):
               filename: the name of the file
     """
     with open(filename, "r+", encoding="utf-8") as f:
-        f.seek(0)
+        f.seek(0, 0)
         return f.read()
 
 
