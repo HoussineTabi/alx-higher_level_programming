@@ -8,14 +8,9 @@ from os import path
 
 filename = "add_item.json"
 
-if path.exists(filename):
-    my_lst = __import__("6-load_from_json_file").load_from_json_file(filename)
-else:
-    my_lst = []
+__import__("6-load_from_json_file").load_from_json_file(filename)
 
-for arg in sys.argv[1:]:
-    my_lst.append(arg)
-
-__import__("5-save_to_json_file").save_to_json_file(my_lst, filename)
+arguments = sys.argv[1:]
+__import__("5-save_to_json_file").save_to_json_file(arguments, filename)
 if __name__ == "__main__":
     print()
