@@ -9,13 +9,14 @@ from os import path
 sv_to_j_fil = __import__("5-save_to_json_file").save_to_json_file
 ld_fm_j_fil = __import__("6-load_from_json_file").load_from_json_file
 
+filename = "add_item.json"
 
 if path.exists(filename):
-    my_list = ld_fm_j_fil(filname)
+    my_list = ld_fm_j_fil(filename)
 else:
     my_list = []
 
-for arg in sys.argc[1:]:
+for arg in sys.argv[1:]:
     my_list.append(arg)
 
 sv_to_j_fil(my_list, filename)
