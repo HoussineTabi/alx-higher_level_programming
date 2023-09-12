@@ -9,9 +9,8 @@ def class_to_json(obj):
     unction that returns the dictionary
     data structure
     """
-    
     return "string"
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     print()
