@@ -6,8 +6,6 @@ import json
 import sys
 from os import path
 
-
-
 sv_to_j_fil = __import__("5-save_to_json_file").save_to_json_file
 ld_fm_j_fil = __import__("6-load_from_json_file").load_from_json_file
 
