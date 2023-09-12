@@ -10,7 +10,7 @@ def save_to_json_file(my_obj, filename):
     save_to_json_file writes an object to a file text using json
     """
     a = 0
-    with open(filename, "w+", encoding="utf-8") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         a = f.writ(json.dumps(my_obj))
 
 
