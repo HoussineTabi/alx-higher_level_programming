@@ -6,19 +6,16 @@ import json
 import sys
 from os import path
 
-sv_to_j_fil = __import__("5-save_to_json_file").save_to_json_file
-ld_fm_j_fil = __import__("6-load_from_json_file").load_from_json_file
-
 filename = "add_item.json"
 
 if path.exists(filename):
-    my_list = ld_fm_j_fil(filename)
+    my_lst = __import__("6-load_from_json_file").load_from_json_file(filename)
 else:
-    my_list = []
+    my_lst = []
 
 for arg in sys.argv[1:]:
-    my_list.append(arg)
+    my_lst.append(arg)
 
-sv_to_j_fil(my_list, filename)
+__import__("5-save_to_json_file").save_to_json_file(my_lst, filename)
 if __name__ == "__main__":
     print()
