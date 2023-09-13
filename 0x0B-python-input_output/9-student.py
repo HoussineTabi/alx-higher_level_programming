@@ -15,12 +15,7 @@ class Stduent:
         self.age = age
 
     def to_json(self):
-        dic = self.__dict__
-        student_dict = {}
-        for i, j in dic.items():
-            if isinstance(j, (list, tuple, dict, str, int, bool)):
-                student_dict[i] = j
-        return student_dict
+        return self.__dict__
 
 
 if __name__ == "__main__":
