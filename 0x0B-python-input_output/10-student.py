@@ -18,7 +18,7 @@ class Student:
             return self.__dict__
         else:
             rdic = self.__dict__.items()
-            return {k: v for k, v in rdic if key in attrs}
+            return {k: v for k, v in rdic if k in attrs}
 
 
 if __name__ == "__main__":
