@@ -14,7 +14,6 @@ class Stduent:
         self.last_name = last_name
         self.age = age
 
-    @staticmethod
     def to_json(self):
         dic = self.__dict__
         student_dict = {}
