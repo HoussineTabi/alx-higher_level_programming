@@ -24,7 +24,8 @@ class Student:
         """
         reload the attribut from json
         """
-        self.__dict__ = json
+        for x in json:
+            self.__dict__[x] = json[x]
 
 
 if __name__ == "__main__":
