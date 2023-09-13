@@ -8,14 +8,17 @@ def append_after(filename='', search_string='', new_string=''):
     """
     discription of the function append_after
     """
-    list_of_text = list()
+    file_text = ''
     with open(filename, "r", encoding="utf-8") as f:
-        list_of_text = f.read().split(search_string)
+        file_text = f.readlines()
+
     with open(filename, "w", encoding="utf-8") as f:
-        for i in range(len(list_of_text)):
-            f.write(list_of_text[i] + '\n')
-            if i != len(list_of_text) - 1:
-                f.write(new_string)
+        for line in file_text:
+            s = line
+            if search_string in line:
+                s += new_string
+            f.write(s)
+
 
 
 if __name__ == "__main__":
