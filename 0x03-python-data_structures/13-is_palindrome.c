@@ -17,6 +17,8 @@ int is_palindrome(listint_t **head)
 		count++;
 		new_head = new_head->next;
 	}
+	new_head = *head;
+	new_head = inverse_linked_list(&new_head, new_head)
 	array_int = malloc(sizeof(int) * count);
 	if (!array_int)
 		return (0);
@@ -39,3 +41,26 @@ int is_palindrome(listint_t **head)
 	}
 	return (1);
 }
+/**
+ * inverse_linked_list - is a funciton that inverse a linkedlist
+ * @head: the adress of head of the list
+ */
+
+listint_t *inverse_linked_list(listint_t **head, listint_t *new_head)
+{
+	listint_t *helper = NULL;
+
+	if (!(head) || !(*head))
+		return (NULL);
+	if (new_head->next == NULL)
+	{
+		new_head->next = (*head);
+		(*head) = new_head;
+		return (*head);
+	}
+	inverse_linked_list(&((*head)->next), *head);
+
+
+
+
+
