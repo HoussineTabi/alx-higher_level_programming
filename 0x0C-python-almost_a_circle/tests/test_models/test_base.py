@@ -4,10 +4,10 @@ The module test of the base with framework unittest
 """
 import sys
 import unittest
+from base import Base
 path = "/home/vagrant/alx/alx-higher_level_programming"
 path += "/0x0C-python-almost_a_circle/models"
 sys.path.append(path)
-from base import Base
 
 
 class testBase(unittest.TestCase):
@@ -26,7 +26,6 @@ class testBase(unittest.TestCase):
         self.assertEqual(self.b3.id, 12)
         self.b4 = Base()
         self.assertEqual(self.b4.id, 4)
-
 
 
 if __name__ == "__main__":

@@ -3,13 +3,13 @@
 The module test of the class Rectangle
 """
 import sys
+import io
+from rectangle import Rectangle
 import unittest
 from unittest.mock import patch
 path = "/home/vagrant/alx/alx-higher_level_programming"
 path += "/0x0C-python-almost_a_circle/models"
 sys.path.append(path)
-from rectangle import Rectangle
-import io
 
 
 class testRectangle(unittest.TestCase):

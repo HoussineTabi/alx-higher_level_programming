@@ -35,7 +35,7 @@ class Base:
         filename = cls.__name__ + ".json"
         if list_objs is None:
             with open(filename, "w+", encoding="utf-8") as f:
-             json.dump([], f)
+                json.dump([], f)
         else:
             for i in list_objs:
                 list_of_dict.append(i.to_dictionary())
@@ -62,7 +62,8 @@ class Base:
             obj.update(**dictionary)
         else:
             obj = cls()
-        return(obj)
+        return (obj)
+
     @classmethod
     def load_from_file(cls):
         """
@@ -71,7 +72,7 @@ class Base:
         filename = cls.__name__ + '.json'
         obj = []
         list_of_obj = list()
-        with open(filename,encoding='utf-8') as f:
+        with open(filename, encoding='utf-8') as f:
             string = f.read()
             if len(string) == 0 or string is None:
                 return []
@@ -80,10 +81,9 @@ class Base:
                 list_of_obj.append(cls(**ele))
 
         return list_of_obj
-    
+
     def __del__(self):
         Base.__nb_objects -= 1
-
 
 
 if __name__ == "__main__":
