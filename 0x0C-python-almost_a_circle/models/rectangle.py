@@ -1,18 +1,25 @@
 #!/usr/bin/python3
-"""
-The rectangle module.
-"""
+"""Defines a rectangle class."""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """
-    Represent a rectangle.
-    """
+    """Represent a rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Initialize a new Rectangle
+        """Initialize a new Rectangle
+
+        Args:
+            width (int): The width
+            height (int): The height
+            x (int): The x coordinate
+            y (int): The y ordonite
+            id (int): The identity of the new Rectangle.
+        Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
         """
         self.width = width
         self.height = height
@@ -22,17 +29,13 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """
-        get the width of the Rectangle.
-        """
+        """get the width of the Rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        set the width method
-        """
-        if type(value) is int:
+        """set the width method"""
+        if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -40,17 +43,13 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """
-        get the height of the Rectangle.
-        """
+        """get the height of the Rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        setter the height method
-        """
-        if type(value) is int:
+        """setter the height method"""
+        if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -58,17 +57,13 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """
-        get the x coordinate of the Rectangle.
-        """
+        """get the x coordinate of the Rectangle."""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """
-        setter x coordinate method
-        """
-        if type(value) is int:
+        """setter x coordinate method"""
+        if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -76,17 +71,13 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """
-        get the y coordinate of the Rectangle.
-        """
+        """get the y coordinate of the Rectangle."""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """
-        sette y mehtod
-        """
-        if type(value) is int:
+        """sette y mehtod"""
+        if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
@@ -109,8 +100,16 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
-        """
-        update the Rectangle
+        """update the Rectangle
+
+        Args:
+            *args: New attribute values.
+                * 1 argument id
+                * 2 argument width
+                * 3 argument height
+                * 4 argument x
+                * 5 argument y
+            **kwargs: key/value pairs.
         """
         if args and len(args) != 0:
             a = 0
@@ -147,9 +146,7 @@ class Rectangle(Base):
                     self.y = v
 
     def to_dictionary(self):
-        """
-        Return the dictionary representation of a Rectangle.
-        """
+        """Return the dictionary representation of a Rectangle."""
         return {
             "id": self.id,
             "width": self.width,
@@ -159,41 +156,7 @@ class Rectangle(Base):
         }
 
     def __str__(self):
-        """
-        Return the print() and str() representation of the Rectangle.
-        """
+        """Return the print() and str() representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
-
-
-if __name__ == "__main__":
-    r1 = Rectangle(10, 7, 2, 8)
-    r2 = Rectangle(2, 4)
-    list_rectangles_input = [r1, r2]
-
-    Rectangle.save_to_file(list_rectangles_input)
-
-    list_rectangles_output = Rectangle.load_from_file()
-
-    for rect in list_rectangles_input:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-
-    for rect in list_rectangles_output:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-    print("---")
-
-    s1 = Square(5)
-    s2 = Square(7, 9, 1)
-    list_squares_input = [s1, s2]
-
-    Square.save_to_file(list_squares_input)
-
-    list_squares_output = Square.load_from_file()
-
-    for square in list_squares_input:
-        print("[{}] {}".format(id(square), square))

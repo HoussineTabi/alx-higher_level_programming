@@ -1,39 +1,45 @@
 #!/usr/bin/python3
 """
-The square module
+Defines a square class.
 """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """
-    The square class
-    """
+    """Represent a square."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """
-        Initialize a new Square.
+        """Initialize a new Square.
+
+        Args:
+            size: The size of the new Square.
+            y: The y coordinate of the new Square.
+            x: The x coordinate of the new Square.
+            id: The identity of the new Square.
         """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """
-        getter the size of the Square.
-        """
+        """getter the size of the Square."""
         return self.width
 
     @size.setter
     def size(self, value):
-        """
-        size setter method
-        """
+        """size setter method"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """
-        Update the Square.
+        """Update the Square.
+
+        Args:
+            *args: new values
+                *1 size
+                *2 size
+                *3 x
+                *4 y
+            **kwargs: key/value pairs of attributes dictionary
         """
         if args and len(args) != 0:
             a = 0
@@ -66,9 +72,7 @@ class Square(Rectangle):
                     self.y = v
 
     def to_dictionary(self):
-        """
-        Return the dictionary representation of the Square.
-        """
+        """Return the dictionary representation of the Square."""
         return {
             "id": self.id,
             "size": self.width,
@@ -77,45 +81,6 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        """
-        Return the print() and str() representation of a Square.
-        """
+        """Return the print() and str() representation of a Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
-
-
-if __name__ == "__main__":
-    r1 = Rectangle(10, 7, 2, 8)
-    r2 = Rectangle(2, 4)
-    list_rectangles_input = [r1, r2]
-
-    Rectangle.save_to_file(list_rectangles_input)
-
-    list_rectangles_output = Rectangle.load_from_file()
-
-    for rect in list_rectangles_input:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-
-    for rect in list_rectangles_output:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-    print("---")
-
-    s1 = Square(5)
-    s2 = Square(7, 9, 1)
-    list_squares_input = [s1, s2]
-
-    Square.save_to_file(list_squares_input)
-
-    list_squares_output = Square.load_from_file()
-
-    for square in list_squares_input:
-        print("[{}] {}".format(id(square), square))
-
-    print("---")
-
-    for square in list_squares_output:
-        print("[{}] {}".format(id(square), square))
