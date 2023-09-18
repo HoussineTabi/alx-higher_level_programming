@@ -2,8 +2,11 @@
 """
 the test module of the square
 """
-import unittest
 import sys
+import unittest
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class testSquare(unittest.TestCase):
