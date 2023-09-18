@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines unittests for base.py.
+Defines unittests for base.
 """
 import os
 import unittest

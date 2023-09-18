@@ -2,7 +2,6 @@
 """
 The rectangle module.
 """
-import base
 from models.base import Base
 
 
