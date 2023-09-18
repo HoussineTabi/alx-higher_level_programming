@@ -4,10 +4,7 @@ The module test of the base with framework unittest
 """
 import sys
 import unittest
-from base import Base
-path = "/home/vagrant/alx/alx-higher_level_programming"
-path += "/0x0C-python-almost_a_circle/models"
-sys.path.append(path)
+from models.base import Base
 
 
 class testBase(unittest.TestCase):

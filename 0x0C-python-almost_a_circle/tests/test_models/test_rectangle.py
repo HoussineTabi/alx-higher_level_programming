@@ -4,7 +4,8 @@ The module test of the class Rectangle
 """
 import sys
 import io
-from rectangle import Rectangle
+from models.base import Base
+from models.rectangle import Rectangle
 import unittest
 from unittest.mock import patch
 path = "/home/vagrant/alx/alx-higher_level_programming"
