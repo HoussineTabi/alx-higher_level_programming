@@ -1,4 +1,4 @@
 -- counts the number of records with id = 98
-select count(*) 
+SELECT COUNT(*) 
 FROM `first_table` 
-where `id` = 89;
+WHERE `id` = 89;
