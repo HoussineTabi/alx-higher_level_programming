@@ -14,7 +14,7 @@ else {
 			let square = '';
 			for (j = 0; j < nb; j++)
 			{
-				square +=  'x';
+				square +=  'X';
 			}
 			console.log(square);
 		}
