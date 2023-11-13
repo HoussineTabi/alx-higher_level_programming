@@ -1,21 +1,22 @@
 #!/usr/bin/node
 /*
-Script that prints x times the string "C is fun"
+Write a script that prints a square
+
+The first argument is the size of the square
+If the first argument can’t be converted to an integer, print “Missing size”
+You must use console.log(...) to print all output
+you are not allowed to use var
+you must use a loop (while, for, etc.)
 */
 
-if (process.argv[2] === null || isNaN(parseInt(process.argv[2]))) {
-	console.log('Missing number of occurences')
-}
-else {
-	let i, j;
-	let nb = parseInt(process.argv[2]);
-	for (i = 0; i < nb; i++)
-		{
-			let square = '';
-			for (j = 0; j < nb; j++)
-			{
-				square +=  'X';
-			}
-			console.log(square);
-		}
+if (isNaN(parseInt(process.argv[2]))) {
+  console.log('Missing size');
+} else {
+  for (let it = 0; it < process.argv[2]; it++) {
+    let line = '';
+    for (let ji = 0; ji < process.argv[2]; ji++) {
+      line += 'X';
+    }
+    console.log(line);
+  }
 }
