@@ -20,4 +20,4 @@ console.log(r3.height);
 const r4 = new Rectangle(2, 0);
 console.log(r4);
 console.log(r4.width);
-console.log(r4.height);
+console.log(r4.height;
