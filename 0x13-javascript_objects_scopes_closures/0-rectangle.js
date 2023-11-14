@@ -2,7 +2,6 @@
 // This class is to describe a Rectangle
 
 class Rectangle {
-	// No properties or methods defined
+// No properties or methods defined
 }
-
 module.exports = Rectangle;
