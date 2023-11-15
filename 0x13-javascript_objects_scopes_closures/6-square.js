@@ -1,23 +1,17 @@
 #!/usr/bin/node
 // This class describe a square
-const Rectangle = require('./4-rectangle');
+const squareBase = require('./5-square');
 
-class Square extends Rectangle {
-	constructor(size) {
-		super(size, size);
-	}
-	charPrint(c) {
-		if (c) {
-		let i, row;
-		c = c + '';
-		row = '';
-		for (i = 0; i < this.width; i++)
-			row += c;
-		for (i = 0; i < this.width; i++)
-			console.log(row);
-		} else {
-			this.print();
-		}
-	}
+class Square extends squareBase {
+  charPrint (c) {
+    if (c === undefined) {
+      c = 'X';
+    }
+
+    for (let i = 0; i < this.height; i++) {
+      console.log(c.repeat(this.height));
+    }
+  }
 }
+
 module.exports = Square;
