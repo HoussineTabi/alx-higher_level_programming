@@ -1,7 +1,16 @@
 #!/usr/bin/node
-const Square = require('./6-square');
+// Defines a square with a given carracter
 
-const s1 = new Square(4);
-s1.charPrint();
+class Square extends squareBase {
+  charPrint (c) {
+    if (c === undefined) {
+      c = 'X';
+    }
 
-s1.charPrint('C');
+    for (let i = 0; i < this.height; i++) {
+      console.log(c.repeat(this.height));
+    }
+  }
+}
+
+module.exports = Square;
