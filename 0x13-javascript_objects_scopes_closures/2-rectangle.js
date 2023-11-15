@@ -1,10 +1,13 @@
 #!/usr/bin/node
-// This class describe a rectangle
+/*
+Write a class Rectangle that defines a rectangle:
 
+You must use the class notation for defining your class
+The constructor must take 2 arguments w and h
+*/
 class Rectangle {
   constructor (w, h) {
-    if (isNaN(w) || isNaN(h) || w <= 0 || h <= 0) {
-    } else {
+    if (parseInt(w) > 0 && parseInt(h) > 0) {
       this.width = w;
       this.height = h;
     }
