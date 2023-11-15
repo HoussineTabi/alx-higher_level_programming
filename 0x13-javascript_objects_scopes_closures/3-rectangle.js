@@ -3,19 +3,17 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (isNaN(w) || isNaN(h) || w <= 0 || h <= 0) {
-    } else {
+    if (parseInt(w) > 0 && parseInt(h) > 0) {
       this.width = w;
       this.height = h;
     }
   }
+
   print () {
-    let row = '';
-    let i;
-    for (i = 0; i < this.width; i++)
-      row += 'X';
-    for (i = 0; i < this.height; i++)
-      console.log(row);
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
+    }
   }
 }
+
 module.exports = Rectangle;
