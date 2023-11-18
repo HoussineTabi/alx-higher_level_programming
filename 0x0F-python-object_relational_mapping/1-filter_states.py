@@ -10,7 +10,7 @@ if __name__ == "__main__":
         exit()
     db = MySQLdb.connect("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * from states where name like 'N%'")
+    cur.execute("SELECT * from states where name like 'N%' order by id")
     result = cur.fetchall()
     for row in result:
         print(row)
