@@ -11,8 +11,8 @@ class State(Base):
     """
     The state class that inherit from the Base class
     """
-    
-    __tablename__  = 'states'
-    
+
+    __tablename__ = 'states'
+
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
