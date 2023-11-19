@@ -13,11 +13,13 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute(
             "select cities.id, cities.name, states.name"
-            "from cities join states on cities.state_id = states.id")
+            " from cities join states on cities.state_id = states.id")
     query_rows = cur.fetchall()
+    citieslist = ''
     for row in query_rows:
         if (row[2] == argv[4]):
-            print(row[1] + ',', end=' ')
-    print()
+            citieslist += row[1] + ', '
+    if (len(citieslist) > 1):
+        print(citieslist[:-2])
     cur.close()
     db.close()
