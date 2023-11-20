@@ -1,24 +1,25 @@
 #!/usr/bin/python3
-"""
-Lists all state obojects using sqlalchemy
-"""
+""" List all state objects using sqlalchemy """
 
-
-from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm.session import sessionmaker
 from sqlalchemy import create_engine
+from sys import argv
 
 
-if __name__ == "__main__":
-    user_name = argv[1]
+if __name__ == '__main__':
+
+    username = argv[1]
     password = argv[2]
-    data_name = argv[3]
+    db_name = argv[3]
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(user_name, password, data_name), pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(username, password, db_name))
+
     Base.metadata.create_all(engine)
-    Session = session(bind=engine)
+
+    Session = sessionmaker(bind=engine)
     session = Session()
 
     new_state = State(name='California')
@@ -27,4 +28,5 @@ if __name__ == "__main__":
 
     session.add(new_state)
     session.add(new_city)
+
     session.commit()
