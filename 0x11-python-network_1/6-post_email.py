@@ -8,7 +8,5 @@ from sys import argv
 
 
 if __name__ == "__name__":
-    url = argv[1]
-    email = argv[2]
-    payload = {'email': email}
-    resp = requests.post(url, data=payload)
+    r = requests.post(argv[1], data={'email': argv[2]})
+    print("{}".format(r.text))
